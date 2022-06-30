@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.nbhalla.cp-dyna</id>
+    <name>cf-dyna</name>
+    <vendor email="" url="">neel</vendor>
+
+    <description>Codeforces code but on steroids.  Generate helpers and dependency trees in quick time. </description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplates file="/Java.xml"/>
+        <liveTemplateMacro implementation="templates.MaxEq" />
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="com.ashdawngary.cpdyna.make" class="actions.ExampleAction1" text="cpdyna" description="no desc">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>

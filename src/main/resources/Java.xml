@@ -1,0 +1,16 @@
+<templateSet group="Java">
+  <template name="max=" value="= Math.max($TTL$, $V1$)$END$" description="applies max= operator to var" toReformat="false" toShortenFQNames="true">
+    <variable
+      name="TTL"
+      expression="maxAssign"
+      defaultValue="e"/>
+    <variable
+      name="V1"
+      defaultValue=""
+      alwaysStopAt="true"
+    />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+</templateSet>
