@@ -2,7 +2,7 @@
   <template name="max=" value="= Math.max($TTL$, $V1$)$END$" description="applies max= operator to var" toReformat="false" toShortenFQNames="true">
     <variable
       name="TTL"
-      expression="maxAssign"
+      expression="lastToken"
       defaultValue="e"/>
     <variable
       name="V1"
@@ -13,4 +13,85 @@
       <option name="JAVA_CODE" value="true" />
     </context>
   </template>
+  <template name="min=" value="= Math.min($TTL$, $V1$)$END$" description="applies max= operator to var" toReformat="false" toShortenFQNames="true">
+    <variable
+      name="TTL"
+      expression="lastToken"
+      defaultValue="e"/>
+    <variable
+      name="V1"
+      defaultValue=""
+      alwaysStopAt="true"
+    />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+  <template name="getInt" value="$T1$$END$" description="does getint">
+    <variable name="T1" expression="getIntImport(SELECTION)">
+    </variable>
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+  <template name="getLong" value="$T1$$END$" description="does getlong">
+    <variable name="T1" expression="getLongImport(SELECTION)">
+    </variable>
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+  <template name="getDouble" value="$T1$$END$" description="does getdouble">
+    <variable name="T1" expression="getDoubleImport(SELECTION)">
+    </variable>
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+  <template name="getLine" value="$T1$$END$" description="does getline">
+    <variable name="T1" expression="getLineImport(SELECTION)">
+    </variable>
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+  <template name="getString" value="$T1$$END$" description="does getString">
+    <variable name="T1" expression="getStringImport(SELECTION)">
+    </variable>
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+  <template name="submit" value="submit($V1$);$END$" description="submits">
+    <variable name="V1" expression="getSubmitImport(SELECTION)" alwaysStopAt="true">
+    </variable>
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+  <template name="readArray" value="readArray($V1$$END$)" description="submits">
+    <variable name="V1" expression="readArrayImport(SELECTION)">
+    </variable>
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+  <template name="readMatrix" value="readMatrix($V1$$A1$, $EMD$)" description="load readmatrix">
+    <variable name="V1" expression="readMatrixImport(SELECTION)">
+    </variable>
+    <variable name="A1" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+    </context>
+  </template>
+
+
+
 </templateSet>

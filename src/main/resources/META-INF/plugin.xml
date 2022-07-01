@@ -2,7 +2,7 @@
     <id>com.nbhalla.cp-dyna</id>
     <name>cf-dyna</name>
     <vendor email="" url="">neel</vendor>
-
+    <depends>com.intellij.java</depends>
     <description>Codeforces code but on steroids.  Generate helpers and dependency trees in quick time. </description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -12,6 +12,15 @@
     <extensions defaultExtensionNs="com.intellij">
         <defaultLiveTemplates file="/Java.xml"/>
         <liveTemplateMacro implementation="templates.MaxEq" />
+        <liveTemplateMacro implementation="templates.GetIntTemplate" />
+        <liveTemplateMacro implementation="templates.GetLongTemplate" />
+        <liveTemplateMacro implementation="templates.GetStringTemplate"/>
+        <liveTemplateMacro implementation="templates.GetDoubleTemplate" />
+        <liveTemplateMacro implementation="templates.GetLineTemplate" />
+        <liveTemplateMacro implementation="templates.GetSubmitTemplate" />
+        <liveTemplateMacro implementation="templates.ReadArrayTemplate" />
+        <liveTemplateMacro implementation="templates.ReadMatrixTemplate" />
+
     </extensions>
 
     <actions>

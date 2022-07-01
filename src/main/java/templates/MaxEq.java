@@ -14,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 public class MaxEq extends MacroBase {
 
   public MaxEq(){
-    super("maxAssign", "maxAssign");
+    super("lastToken", "lastToken");
   }
 
   private MaxEq(String n, String d){
@@ -39,7 +39,6 @@ public class MaxEq extends MacroBase {
     return new TextResult(p.getText());
   }
 
-  @Override
   public boolean isAcceptableInContext(TemplateContextType t){
     return true;
   }
